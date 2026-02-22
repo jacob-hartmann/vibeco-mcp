@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security Vulnerability
+    url: mailto:foss@jacobhartmann.me
+    about: Please report security vulnerabilities via email. Do not create public issues for security concerns.
+  - name: MCP Protocol Documentation
+    url: https://modelcontextprotocol.io/
+    about: Model Context Protocol documentation for protocol-level questions.
