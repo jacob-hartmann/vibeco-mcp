@@ -1,6 +1,6 @@
 {
   "name": "vibeco-mcp",
-  "version": "0.1.0",
+  "version": "0.1.0-rc.1",
   "description": "Model Context Protocol (MCP) server for Vibe CTV/streaming advertising reporting",
   "type": "module",
   "main": "./dist/index.js",
