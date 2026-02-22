@@ -92,13 +92,13 @@ In Cursor settings, add an MCP server:
 
 ### Environment Variables
 
-| Variable            | Required | Default                                                  | Description                            |
-| ------------------- | -------- | -------------------------------------------------------- | -------------------------------------- |
-| `VIBE_API_KEY`      | Yes      | -                                                        | Vibe API key                           |
-| `VIBE_API_BASE_URL` | No       | `https://clear-platform.vibe.co/rest/reporting/v1`       | API base URL (override for testing)    |
-| `MCP_TRANSPORT`     | No       | `stdio`                                                  | Transport mode: `stdio` or `http`      |
-| `MCP_SERVER_HOST`   | No       | `127.0.0.1`                                              | Host to bind the HTTP server to        |
-| `MCP_SERVER_PORT`   | No       | `3000`                                                   | Port for the HTTP server               |
+| Variable            | Required | Default                                            | Description                         |
+| ------------------- | -------- | -------------------------------------------------- | ----------------------------------- |
+| `VIBE_API_KEY`      | Yes      | -                                                  | Vibe API key                        |
+| `VIBE_API_BASE_URL` | No       | `https://clear-platform.vibe.co/rest/reporting/v1` | API base URL (override for testing) |
+| `MCP_TRANSPORT`     | No       | `stdio`                                            | Transport mode: `stdio` or `http`   |
+| `MCP_SERVER_HOST`   | No       | `127.0.0.1`                                        | Host to bind the HTTP server to     |
+| `MCP_SERVER_PORT`   | No       | `3000`                                             | Port for the HTTP server            |
 
 ## Features
 
@@ -114,34 +114,34 @@ The server provides **8 tools** for full Vibe API coverage:
 
 #### Advertisers
 
-| Tool                    | Description                             |
-| ----------------------- | --------------------------------------- |
-| `vibe.advertisers.list` | List all advertiser IDs                 |
+| Tool                    | Description             |
+| ----------------------- | ----------------------- |
+| `vibe.advertisers.list` | List all advertiser IDs |
 
 #### Apps
 
-| Tool             | Description                        |
-| ---------------- | ---------------------------------- |
-| `vibe.apps.list` | List app IDs for an advertiser     |
+| Tool             | Description                    |
+| ---------------- | ------------------------------ |
+| `vibe.apps.list` | List app IDs for an advertiser |
 
 #### Campaigns
 
-| Tool                   | Description                              |
-| ---------------------- | ---------------------------------------- |
-| `vibe.campaigns.list`  | List campaign details for an advertiser  |
+| Tool                  | Description                             |
+| --------------------- | --------------------------------------- |
+| `vibe.campaigns.list` | List campaign details for an advertiser |
 
 #### Reports
 
-| Tool                   | Description                                  |
-| ---------------------- | -------------------------------------------- |
-| `vibe.reports.create`  | Create an async report (rate limited: 15/hr) |
-| `vibe.reports.status`  | Check report status and get download URL     |
+| Tool                  | Description                                  |
+| --------------------- | -------------------------------------------- |
+| `vibe.reports.create` | Create an async report (rate limited: 15/hr) |
+| `vibe.reports.status` | Check report status and get download URL     |
 
 #### Purchases
 
-| Tool                    | Description                            |
-| ----------------------- | -------------------------------------- |
-| `vibe.purchases.list`   | List purchase IDs for an advertiser    |
+| Tool                  | Description                         |
+| --------------------- | ----------------------------------- |
+| `vibe.purchases.list` | List purchase IDs for an advertiser |
 
 ### Resources
 
@@ -149,25 +149,25 @@ The server exposes data as MCP resources:
 
 #### Static Resources
 
-| Resource URI           | Description              |
-| ---------------------- | ------------------------ |
-| `vibe://advertisers`   | List all advertiser IDs  |
+| Resource URI         | Description             |
+| -------------------- | ----------------------- |
+| `vibe://advertisers` | List all advertiser IDs |
 
 #### Resource Templates
 
-| Resource URI                                   | Description                              |
-| ---------------------------------------------- | ---------------------------------------- |
-| `vibe://advertisers/{advertiser_id}/apps`      | App IDs for a specific advertiser        |
+| Resource URI                                   | Description                                |
+| ---------------------------------------------- | ------------------------------------------ |
+| `vibe://advertisers/{advertiser_id}/apps`      | App IDs for a specific advertiser          |
 | `vibe://advertisers/{advertiser_id}/campaigns` | Campaign details for a specific advertiser |
 
 ### Prompts
 
 The server provides guided prompts for common workflows:
 
-| Prompt            | Description                                                    |
-| ----------------- | -------------------------------------------------------------- |
-| `campaign-report` | Guided workflow for creating a campaign performance report      |
-| `setup-api-key`   | Instructions for configuring the Vibe API key                  |
+| Prompt            | Description                                                |
+| ----------------- | ---------------------------------------------------------- |
+| `campaign-report` | Guided workflow for creating a campaign performance report |
+| `setup-api-key`   | Instructions for configuring the Vibe API key              |
 
 ## Development
 

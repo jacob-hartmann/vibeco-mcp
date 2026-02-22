@@ -394,7 +394,9 @@ export async function startHttpServer(
 
       clearInterval(cleanupInterval);
 
-      console.error(`[vibeco-mcp] Closing ${sessions.size} active session(s)...`);
+      console.error(
+        `[vibeco-mcp] Closing ${sessions.size} active session(s)...`
+      );
       for (const [sessionId, session] of sessions.entries()) {
         try {
           /* v8 ignore start */
