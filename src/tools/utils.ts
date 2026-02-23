@@ -121,7 +121,9 @@ export function formatSuccess(data: unknown): ToolSuccessResponse {
     ],
   };
   if (data !== null && typeof data === "object") {
-    base.structuredContent = data as Record<string, unknown>;
+    base.structuredContent = Array.isArray(data)
+      ? { data }
+      : (data as Record<string, unknown>);
   }
   return base;
 }
@@ -152,7 +154,9 @@ export function formatSuccessWithRateLimit(
     ],
   };
   if (data !== null && typeof data === "object") {
-    base.structuredContent = data as Record<string, unknown>;
+    base.structuredContent = Array.isArray(data)
+      ? { data }
+      : (data as Record<string, unknown>);
   }
   return base;
 }

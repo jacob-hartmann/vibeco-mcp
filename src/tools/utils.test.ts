@@ -76,6 +76,12 @@ describe("Tool Utilities", () => {
       expect(result.structuredContent).toEqual(data);
     });
 
+    it("should wrap array data in object for structuredContent", () => {
+      const data = [{ id: "adv-1" }, { id: "adv-2" }];
+      const result = formatSuccess(data);
+      expect(result.structuredContent).toEqual({ data });
+    });
+
     it("should not include structuredContent for non-object data", () => {
       const result = formatSuccess(null);
       expect(result.structuredContent).toBeUndefined();
@@ -105,6 +111,12 @@ describe("Tool Utilities", () => {
       const data = { data: [] };
       const result = formatSuccessWithRateLimit(data);
       expect(result.structuredContent).toEqual(data);
+    });
+
+    it("should wrap array data in object for structuredContent", () => {
+      const data = ["item-1", "item-2"];
+      const result = formatSuccessWithRateLimit(data);
+      expect(result.structuredContent).toEqual({ data });
     });
 
     it("should not include structuredContent for non-object data", () => {
