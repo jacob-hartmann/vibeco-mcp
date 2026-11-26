@@ -19,8 +19,7 @@ import { loadVibeConfig, VibeAuthError } from "./auth.js";
  * Result type for getVibeClient - allows callers to handle errors gracefully
  */
 export type VibeClientResult =
-  | { success: true; client: VibeClient }
-  | { success: false; error: string };
+  { success: true; client: VibeClient } | { success: false; error: string };
 
 // ---------------------------------------------------------------------------
 // Client Cache
