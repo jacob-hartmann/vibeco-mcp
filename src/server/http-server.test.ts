@@ -296,7 +296,7 @@ describe("HTTP Server", () => {
       expect(rateLimit.default).toHaveBeenCalledWith(
         expect.objectContaining({
           windowMs: 60000,
-          max: 100,
+          limit: 100,
         })
       );
     });
